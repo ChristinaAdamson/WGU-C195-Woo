@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenuController">
+   <children>
+      <Pane fx:id="menuPane" prefHeight="500.0" prefWidth="729.0">
+         <children>
+            <Text layoutX="196.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Manager Home" textAlignment="CENTER" wrappingWidth="337.33673095703125">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Text>
+            <Button fx:id="closeButton" layoutX="650.0" layoutY="451.0" mnemonicParsing="false" onAction="#closeAction" text="Close" />
+            <Button fx:id="customerButton" layoutX="489.0" layoutY="451.0" mnemonicParsing="false" onAction="#changeToCustomerScreen" text="Customer List" />
+            <TableView fx:id="appointmentTableView" layoutX="32.0" layoutY="108.0" prefHeight="330.0" prefWidth="669.0">
+              <columns>
+                <TableColumn fx:id="startDateColumn" prefWidth="104.00000381469727" text="Start" />
+                <TableColumn fx:id="endDateColumn" prefWidth="108.0" text="End" />
+                  <TableColumn fx:id="appointmentIdColumn" prefWidth="53.60002136230469" text="Appt. ID" />
+                  <TableColumn fx:id="titleColumn" prefWidth="50.4000244140625" text="Title" />
+                  <TableColumn fx:id="descriptionColumn" prefWidth="100.800048828125" text="Description" />
+                  <TableColumn fx:id="locationColumn" prefWidth="74.4000244140625" text="Location" />
+                  <TableColumn fx:id="contactColumn" prefWidth="76.0" text="Contact" />
+                  <TableColumn fx:id="typeColumn" prefWidth="48.0" text="Type" />
+                  <TableColumn fx:id="customerIdColumn" minWidth="0.0" prefWidth="49.00006103515625" text="Cus. ID" />
+              </columns>
+            </TableView>
+            <RadioButton fx:id="weeklyToggle" layoutX="38.0" layoutY="76.0" mnemonicParsing="false" text="Weekly" />
+            <RadioButton fx:id="monthlyToggle" layoutX="123.0" layoutY="76.0" mnemonicParsing="false" text="Monthly" />
+            <Button layoutX="32.0" layoutY="451.0" mnemonicParsing="false" onAction="#addAppointment" text="Add Appointment" />
+            <Button layoutX="156.0" layoutY="451.0" mnemonicParsing="false" onAction="#modifyAppointment" text="Modify Appointment" />
+            <Button layoutX="293.0" layoutY="451.0" mnemonicParsing="false" onAction="#deleteAppointment" text="Delete Appointment" />
+            <Label fx:id="timezoneLabel" layoutX="338.0" layoutY="64.0" text="TimeZone" />
+            <Button layoutX="605.0" layoutY="11.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#TypeMonthAppointment" prefHeight="23.0" prefWidth="96.0" text="Month-Type">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="605.0" layoutY="36.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#contactSchedule" prefHeight="23.0" prefWidth="96.0" text="Contact Schedule">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="605.0" layoutY="61.0" maxHeight="-Infinity" mnemonicParsing="false" onAction="#locationTotal" prefHeight="23.0" prefWidth="96.0" text="Total by Location">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Label layoutX="633.0" layoutY="85.0" text="Reports" />
+            <ComboBox fx:id="contactIdCombo" layoutX="543.0" layoutY="35.0" prefHeight="0.0" prefWidth="53.0" visibleRowCount="15" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

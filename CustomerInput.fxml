@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="294.0" prefWidth="414.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerInputController">
+   <children>
+      <Pane layoutX="6.0" prefHeight="313.0" prefWidth="408.0">
+         <children>
+            <Label fx:id="formTypeLabel" layoutX="143.0" layoutY="17.0" text="Add Customer">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idField" disable="true" layoutX="123.0" layoutY="59.0" promptText="Auto Generated" />
+            <TextField fx:id="nameField" layoutX="123.0" layoutY="88.0" />
+            <TextField fx:id="addressField" layoutX="124.0" layoutY="120.0" />
+            <Label layoutX="48.0" layoutY="63.0" text="ID" />
+            <Label layoutX="46.0" layoutY="91.0" text="Name" />
+            <Label layoutX="46.0" layoutY="124.0" text="Address" />
+            <Label layoutX="46.0" layoutY="157.0" text="Phone #" />
+            <Label layoutX="46.0" layoutY="226.0" text="Country" />
+            <Label layoutX="46.0" layoutY="262.0" text="Division" />
+            <TextField fx:id="phoneField" layoutX="124.0" layoutY="153.0" />
+            <Button fx:id="saveButton" layoutX="318.0" layoutY="99.0" mnemonicParsing="false" onAction="#saveAction" text="Save" />
+            <Button fx:id="cancelButton" layoutX="315.0" layoutY="188.0" mnemonicParsing="false" onAction="#cancelAction" text="Cancel" />
+            <ComboBox fx:id="countryCombo" layoutX="124.0" layoutY="223.0" prefWidth="150.0" />
+            <ComboBox fx:id="divisionCombo" layoutX="124.0" layoutY="258.0" prefWidth="150.0" />
+            <Label layoutX="46.0" layoutY="192.0" text="Postal Code" />
+            <TextField fx:id="postalField" layoutX="124.0" layoutY="188.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
